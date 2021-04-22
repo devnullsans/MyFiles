@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+  background-color: whitesmoke;
+}
+header {
+  flex: 1 1 14vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+header > p {
+  visibility: hidden;
+  text-align: center;
+}
+main {
+  flex: 1 1 75vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow-y: auto;
+  margin-bottom: 2vh;
+}
+div {
+  flex: 0 0 3.375em;
+  display: flex;
+  align-items: stretch;
+  margin: .5em 0;
+  border: 1px solid black;
+  background-color: transparent;
+}
+div.seled {
+  background-color: lavender;
+}
+div > span {
+  text-align: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  line-height: 2.4em;
+}
+span.ico-s, span.siz-s {
+  flex-basis: 20%;
+}
+span.nme-s {
+  flex: 1 1 100%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+footer {
+  flex: 1 1 5.5vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer > label {
+  flex: 1 1 100%;
+  display: block;
+  cursor: pointer;
+  margin: .2em;
+  text-align: center;
+  line-height: 2em;
+  border: 1px solid black;
+  background-color: powderblue;
+}
+footer > label:active {
+  background-color: steelblue;
+}
+footer > label.ld {
+  cursor: not-allowed;
+  background-color: lightsalmon;
+}
+footer > label.ld:active {
+  background-color: lightsalmon;
+}
+footer > label > input {
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  body {
+    max-width: 45vw;
+    margin: 0 auto;
+  }
+}
